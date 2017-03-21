@@ -1,16 +1,21 @@
 $mobile: 578px
-$tablet: 950px
+$tablet: 700px
+$tabletLrg: 950px
+$desktop: 1100px
+$blue: #00d8ff
 
 $background: #0b7755
 
 
 =media($media) 
-	@if $media == maxMobile 
+	@if $media == mobile
 		@media only screen and (max-width: $mobile)
 			@content
-	
-	@else if $media == maxTablet 
-		@media only screen and (max-width: $tablet)
+	@else if $media == tablet 
+		@media all and (max-width: $tablet)
+			@content
+	@else if $media == tabletLrg
+		@media only screen and (max-width: $tabletLrg)
 			@content
 	@else if $media == maxModal 
 		@media only screen and (max-width: $modal)

@@ -6,15 +6,11 @@
   "author": "Andy Sellick and Alvaro Fernandez",
   "main": "gulpfile.js",
   "scripts": {
-    "upstart": "forever start -c node_modules/.bin/babel-node app/server.js",
+    "setup": "npm run run-npm-install",
     "run-npm-install": "npm install",
     "run-gulp": "gulp",
-    "setup": "npm run run-npm-install && npm run run-gulp",
-    "start": "cross-env NODE_ENV=production node_modules/.bin/babel-node --presets react,es2015 app/server.js",
-    "start-dev": "npm run start-dev-hmr",
-    "start-dev-single-page": "node_modules/.bin/http-server app/static",
-    "start-dev-hmr": "node_modules/.bin/webpack-dev-server --progress --inline --hot --open",
-    "build": "cross-env NODE_ENV=production node_modules/.bin/webpack -p"
+    "start": "node_modules/.bin/babel-node app/server.js",  
+    "upstart": "forever start -c node_modules/.bin/babel-node app/server.js"
   },
   "repository": {
     "type": "git",

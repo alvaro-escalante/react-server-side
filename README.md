@@ -4,9 +4,14 @@ JS SEO REACT.JS - Server Side Rendering
 Quick start
 -----------
 
-Clone the repo and run 'npm run setup'. For all subsequent uses, just run 'gulp --dev'.
+Clone the repo and run 'npm run setup'. 
 
-For production run gulp pro for react production version and uglify as well as picture compression
+For development run 'npm start' to run the node server and then on another terminal tab 'gulp --dev'.
+
+For production run gulp pro for the react production version, uglify and picture compression.
+
+To upload to the server copy app (except the dev folder) and packages.json and run 'npm install' 
+from the terminal run 'npm run-script upstart'
 
 Note, Windows users may need to run the initial command more than once for it to complete successfully.
 

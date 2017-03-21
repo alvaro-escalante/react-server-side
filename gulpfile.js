@@ -153,7 +153,7 @@ gulp.task('clean', ['clear'], (done) => {
 // BrowserSync 
 gulp.task('browser-sync', ['scripts'], () => {
   browserSync.init(paths.styles.dest + '*.css', {
-    proxy: "localhost/js-seo-react/app/static/index-dev.html",
+    proxy: "localhost:3000",
     middleware: [
       history()
     ],
@@ -170,7 +170,7 @@ gulp.task('browser-sync', ['scripts'], () => {
 });
 
 // Default development version task 
-gulp.task('default', ['clean', 'styles', 'images', 'assets'], () => {
+gulp.task('default', ['clean', 'styles', 'images', 'assets', 'html'], () => {
   gulp.start('browser-sync');
 });
 

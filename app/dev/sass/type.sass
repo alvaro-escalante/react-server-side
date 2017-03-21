@@ -6,8 +6,10 @@ h1, h2, p
 	text-shadow: -1px 1px 3px #333
 	font-weight: 300
 
-.container h1, p 
+.container h1, h2, h3, p 
 	padding: 10px 32px 14px 
+	+media(tabletLrg)
+		padding: 10px 5px 14px
 
 .container h1	
 	font-size: 30px
@@ -16,28 +18,20 @@ h1
 	font-size: 50px
   text-shadow: 0px 4px 3px #000
 	position: relative
+	+media(tabletLrg)
+		font-size: 34px
 
 h1 + p
 	margin-top: 10px
+
+h3
+	font-size: 50px
+	color: #ffffff
 
 p
 	font-size: 15px
 	line-height: 2em
 
-.nav a
-	color: #f1f1f1
-	box-shadow: 0px 2px 4px 0px #000000
-	padding: 10px 25px
-	border-radius: 3px
-	margin-right: 10px
-	&:hover
-		color: #ccc
-		box-shadow: 0px -1px 3px 0px #545454
-	&.active
-		color: #00d8ff
-	&.active, &:focus
-		box-shadow: 0px -1px 1px 0px #545454
+
 		
-
-
 	

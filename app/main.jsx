@@ -4,7 +4,6 @@ import { Router, browserHistory } from 'react-router'
 import routes from './routes'
 
 window.onload = () => {
-
   ReactDOM.render(
     <Router 
       history={browserHistory} 
