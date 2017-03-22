@@ -9,7 +9,7 @@ import Myths from './components/Myths'
 import Resources from './components/Resources'
 import Builtvisible from './components/Builtvisible'
 import NotFoundPage from './components/NotFoundPage'
-
+// Server side rendering
 const routes = (
   <Router history={browserHistory}>
     <Route path='/' component={App}>
@@ -24,5 +24,7 @@ const routes = (
    </Route>
   </Router>
 )
-
+// Export props to App.js
 export default routes
+
+

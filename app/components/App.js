@@ -1,48 +1,47 @@
 import React, { Component } from 'react'
 import Views from './Views'
 import Pages from './Pages'
-
+// Create model and logic state component
 export default class App extends Component {
+  // Set constructor to access props
   constructor(props) {
-    super(props);
-
-    var currentPage = null;
-
-    for (var i = Pages.length - 1; i >= 0; i--) {
-      if (Pages[i].url === props.location.pathname)
-        currentPage = Pages[i].name
-    }
-
+    super(props)
+    // Defined current page by checking url against Pages data
+    let currentPage;
+    Pages.forEach(page => {
+      if (page.url === props.location.pathname) currentPage = page.name
+    })
+    // Set state
     this.state = {
-      parallax: { backgroundPosition: null },
-      mobileActive: false,
-      width: (typeof window !== 'undefined') ? window.innerWidth <= 950 : 1024,
-      page: currentPage
+      mobileActive: false,             // Mobile menu hidden
+      width: global.innerWidth <= 950, // Width is less or equal to Desktop 
+      page: currentPage                // Page equal to url
     }
   }
-
-  handleParallax = () => {
-    (typeof window !== 'undefined')
-      ? this.setState({ parallax: { backgroundPosition: `50% ${(window.pageYOffset * 0.5)}px`}})
-      : null
+  // Invoque parallax and mobile menu on scroll and resize(use global not window for node.js)
+  componentWillMount() {
+    global.onscroll = () => this.handleParallax()
+    global.onresize = () => this.handleResize()
   }
-
-  handleResize = () => {
-    (typeof window !== 'undefined')
-      ? this.setState({ mobile: false, width: window.innerWidth <= 950})
-      : null
+  // toggle mobile menu, Check that mobile width is true
+  handleMobile = () => {
+    if (this.state.width)
+      this.setState({ mobileActive: !this.state.mobileActive })
   }
-
-  handleMobile = () =>  
-    this.setState({ mobileActive: !this.state.mobileActive })
-
-  handlePage = pageName => 
+  // Set the current page to item clicked
+  handlePage = (pageName) => 
     this.setState({page: pageName})
-
+  // Set Parallax effect
+  handleParallax = () =>  
+    this.setState({ parallax: { backgroundPosition: `50% ${(global.pageYOffset * 0.5)}px`}})
+  // Toggle mobile menu and check width
+  handleResize = () => 
+    this.setState({ mobileActive: false, width: global.innerWidth <= 950})
+  // Send render to component Views
   render() {
-
-    const {parallax, mobileActive, width, page} = this.state;
-  
+    // Shorthand for this.state.*
+    const {parallax, mobileActive, width, page} = this.state
+    // Return Views with state passed as props and functions
     return (
       <Views 
         parallax={parallax}
@@ -51,8 +50,6 @@ export default class App extends Component {
         page={page}
         handleMobile={this.handleMobile}
         handlePage={this.handlePage}
-        handleParallax={this.handleParallax}
-        handleResize={this.handleResize}
         children={this.props.children}
       />
     )
