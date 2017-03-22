@@ -9,8 +9,8 @@
     "setup": "npm run run-npm-install",
     "run-npm-install": "npm install",
     "run-gulp": "gulp",
-    "start": "node_modules/.bin/babel-node app/server.js",  
-    "upstart": "forever start -c node_modules/.bin/babel-node app/server.js"
+    "start": "node_modules/.bin/babel-node app/server.js",
+    "upstart": "forever start -c node_modules/.bin/babel-node  app/server.js"
   },
   "repository": {
     "type": "git",
@@ -64,10 +64,10 @@
     "util-merge": "^1.0.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.7.0"
+    "watchify": "^3.7.0",
+    "ejs": "^2.5.1"
   },
   "dependencies": {
-    "express": "^4.15.2",
-    "express-handlebars": "^3.0.0"
+    "express": "^4.15.2"
   }
 }

@@ -107,14 +107,7 @@ gulp.task('scripts',() => {
   browserify.on('update',() => bundle(browserify)) // Re-run bundle on source updates
 });
 
-// HTML 
-gulp.task('html',() => {
-  gulp.src(paths.templates.src + 'dev/index-dev.html')
-    //.pipe($.htmlmin({collapseWhitespace: true, minifyJS: true, minifyCSS: true}))
-    .pipe($.newer(paths.templates.dest))
-    .pipe(gulp.dest(paths.templates.dest))
-    .pipe(browserSync.stream());
-});
+
 
 // Images
 gulp.task('images',() => {
@@ -136,7 +129,6 @@ gulp.task('assets',() => {
     .pipe($.newer(paths.assets.dest))
     .pipe(gulp.dest(paths.assets.dest));
 });
-
 
 // Minify React library for production
 gulp.task('prod-environment', () => process.env.NODE_ENV = 'production');
@@ -170,11 +162,11 @@ gulp.task('browser-sync', ['scripts'], () => {
 });
 
 // Default development version task 
-gulp.task('default', ['clean', 'styles', 'images', 'assets', 'html'], () => {
+gulp.task('default', ['clean', 'styles', 'images', 'assets'], () => {
   gulp.start('browser-sync');
 });
 
 // Production build useage gulp pro --dev
-gulp.task('pro', ['prod-environment', 'clean', 'styles', 'images', 'assets', 'html'], () => {
+gulp.task('pro', ['prod-environment', 'clean', 'styles', 'images', 'assets'], () => {
   gulp.start('browser-sync');
 });
