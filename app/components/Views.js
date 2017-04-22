@@ -1,8 +1,10 @@
 import React from 'react'
 import { IndexLink, Link } from 'react-router'
 import Pages from './Pages'
+import Resources from './Resources'
 // Create view stateless componets and pass props and controllers
 export default ({parallax, mobileActive, width, page, handleMobile, handlePage, children}) => {
+  // global.getElementById('here').getElementsByTagName('a')[6].classList.remove('active')
   // Check width to render mobile, map Pages obj and send page.name to handlePage 
   return (
     <div>
@@ -18,7 +20,7 @@ export default ({parallax, mobileActive, width, page, handleMobile, handlePage, 
           </div>
           <span class='current'>{page}</span>
           </div> : null}
-          <div onClick={() => handleMobile()} className={width && mobileActive ? 'nav-mobile' : 'nav'}>
+          <div onClick={() => handleMobile()} id='here' className={width && mobileActive ? 'nav-mobile' : 'nav'+ ' hide'}>
             {Pages.map(page => 
               <IndexLink 
                 key={page.name} 

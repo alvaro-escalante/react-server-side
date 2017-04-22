@@ -17,6 +17,7 @@
 	max-width: 950px
 	margin: 0 auto
 	text-transform: uppercase
+	font-size: 13px
 	+media(tabletLrg)
 		display: none
 	a
@@ -35,6 +36,12 @@
 		&.active, &:focus
 			box-shadow: 0px -1px 1px 0px #545454
 
+.nav-mobile, .nav-trigger
+	display: none
+
++media(tabletLrg)
+	.nav-mobile, .nav-trigger
+		display: block
 
 .nav-trigger
 	display: block
@@ -64,7 +71,13 @@
 			width: 1.3em	
 
 .nav-mobile
+	opacity: 1
+	transition: height 500ms 0ms, opacity 500ms 500ms;
 	margin-top: 11px
+	&.hide
+		transition: height 500ms 500ms, opacity 500ms 0ms
+  	opacity: 0.0
+  	height: 0px
 	a 
 		clear: both
 		background: #222 url('../img/texture.png') repeat scroll 0 0

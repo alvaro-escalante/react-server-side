@@ -4,47 +4,29 @@ import DocumentMeta from 'react-document-meta'
 export default () => {
 
   const meta = {
-    title: 'About Title',
-    description: 'About description for React SEO',
-    canonical: 'http://reactseo.io',
-    meta: {
-      charset: 'utf-8',
-      name: {
-        keywords: 'react,meta,document,html,tags'
-      },
-      property: {
-        'og:title': 'Social title property About page react',
-        'og:site_name': 'Social Sitename About page react',
-        'og:description': 'Social description property About page react'
-      }
-    }
+    title: 'What is React JS - ReactSEO.io',
+    description: 'React is a declarative flexible open-source JavaScript library designed to deal exclusively with the output of information.',
+    canonical: 'http://reactseo.io/what-is-react'
   }
 
   return (
   <div>
     <DocumentMeta {...meta} />
-    <h1>What is React</h1>
+    <h1>What is React?</h1>
     <p>
-      At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+      React, or ReactJS, is a declarative JavaScript library designed as an efficient, flexible route to building user interfaces. It is maintained by Facebook, instagram and a community of independent developers and businesses. It is open source and provides out of the box developer tools. 
     </p>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquid officiis nesciunt ab  praesentium officia perspiciatis ad repellat nisi blanditiis natus cum ipsa velit, recusandae   consequuntur distinctio dicta neque. Quos.
+      React offers the possibility of creating rich web applications delivering a fast and efficient experience. The basic idea is that components inform React about what you want to render. React will update and render only those components when your data changes.
     </p>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquid officiis nesciunt ab  praesentium officia perspiciatis ad repellat nisi blanditiis natus cum ipsa velit, recusandae   consequuntur distinctio dicta neque. Quos.
+      React is often described in the same way as other Javascript frameworks but this is really misleading. <strong>React and Angular are not directly comparable entities.</strong> Where Angular is a complete framework, React is not. React is a declarative, flexible Javascript Library used to deal <strong>exclusively with Views</strong> — the output of information.
     </p>
+      
+    <p class='inline'>This is a great post that goes into things in more detail</p>
+    <a target='_blank' href='http://blog.andrewray.me/reactjs-for-stupid-people/'>Reactjs for stupid people/</a>
 
-    <img src="../img/react-router.jpg" alt="React Router"/>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquid officiis nesciunt ab  praesentium officia perspiciatis ad repellat nisi blanditiis natus cum ipsa velit, recusandae   consequuntur distinctio dicta neque. Quos.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquid officiis nesciunt ab  praesentium officia perspiciatis ad repellat nisi blanditiis natus cum ipsa velit, recusandae   consequuntur distinctio dicta neque. Quos.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquid officiis nesciunt ab  praesentium officia perspiciatis ad repellat nisi blanditiis natus cum ipsa velit, recusandae   consequuntur distinctio dicta neque. Quos.
-    </p>
+    <img src="../img/about-react.jpg" alt="What is React"/>
   </div>
   )
 }

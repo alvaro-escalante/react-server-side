@@ -4,46 +4,29 @@ import DocumentMeta from 'react-document-meta'
 export default () => {
 
   const meta = {
-    title: 'Builtvisible Title',
-    description: 'Builtvisible description for React SEO',
-    canonical: 'http://reactseo.io',
-    meta: {
-      charset: 'utf-8',
-      name: {
-        keywords: 'react,meta,document,html,tags'
-      },
-      property: {
-        'og:title': 'Social title property Builtvisible page react',
-        'og:site_name': 'Social Sitename Builtvisible page react',
-        'og:description': 'Social description property Builtvisible page react'
-      }
-    }
+    title: 'A React JS SEO Experiment by Builtvisible - ReatSEO.io',
+    description: 'An SEO experiment designed and developed by Builtvisible, specialists in organic digital marketing.',
+    canonical: 'http://reactseo.io/builtvisible'
   }
 
   return (
   <div>
     <DocumentMeta {...meta} />
-    <h1>Builtvisible</h1>
-    <img src="../img/organic-digital.jpg" alt="Builtvisible Organic Digital"/>
+    <h1>About Us</h1>
+    <a target='_blank' href='https://builtvisible.com'><img src="../img/organic-digital.jpg" alt="Builtvisible Organic Digital"/></a>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquid officiis nesciunt ab  praesentium officia perspiciatis ad repellat nisi blanditiis natus cum ipsa velit, recusandae   consequuntur distinctio dicta neque. Quos.
+      We are <a target='_blank' href='https://buildvisible.com'>Builtvisible</a>, an agency bringing <a target='_blank' href='https://builtvisible.com/services/'>Organic Digital</a> excellence to bear on some of the world’s most exciting brands. We specialise in search, content and analytics, and deliver highly performant campaigns and solutions to improve the online performance of all our <a target='_blank' href='https://builtvisible.com/our-work/'>clients</a>. 
     </p>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquid officiis nesciunt ab  praesentium officia perspiciatis ad repellat nisi blanditiis natus cum ipsa velit, recusandae   consequuntur distinctio dicta neque. Quos.
+     Experimentation is a core part of our success as a business. Fuelled by a constant curiosity around how things work, we set up this and other experiments to check facts and build a better understanding of what works on the internet. 
     </p>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquid officiis nesciunt ab  praesentium officia perspiciatis ad repellat nisi blanditiis natus cum ipsa velit, recusandae   consequuntur distinctio dicta neque. Quos.
+      Our findings end up as part of our <a target='_blank' href='https://builtvisible.com/blog/'>blog</a> or within our <a target='_blank' href='https://builtvisible.com/resources/'>resource section</a>. If you like the sound of what we do then please do <a target='_blank' href='https://builtvisible.com/contact/'>get in touch</a>.
     </p>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquid officiis nesciunt ab  praesentium officia perspiciatis ad repellat nisi blanditiis natus cum ipsa velit, recusandae   consequuntur distinctio dicta neque. Quos.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquid officiis nesciunt ab  praesentium officia perspiciatis ad repellat nisi blanditiis natus cum ipsa velit, recusandae   consequuntur distinctio dicta neque. Quos.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquid officiis nesciunt ab  praesentium officia perspiciatis ad repellat nisi blanditiis natus cum ipsa velit, recusandae   consequuntur distinctio dicta neque. Quos.
-    </p>
+    <form id='register-form' action="../newsletter.php" method="post" class="cform-form" noValidate="novalidate">
+      <input type="text" name="contacto" placeholder="Your Email" class="cform-text" title="your email" />
+      <input class="cform-text" type="submit" name="submit" value="Send message" class="cform-submit" />
+    </form>
   </div>
   )
 }

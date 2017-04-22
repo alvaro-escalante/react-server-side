@@ -24,12 +24,15 @@ export default class App extends Component {
     global.onresize = () => this.handleResize()
   }
   // toggle mobile menu, Check that mobile width is true
-  handleMobile = () => {
+  handleMobile = e => {
+    var el = document.getElementById('here')
+    el.classList.remove('hide')
     if (this.state.width)
       this.setState({ mobileActive: !this.state.mobileActive })
+    
   }
   // Set the current page to item clicked
-  handlePage = (pageName) => 
+  handlePage = (pageName) =>
     this.setState({page: pageName})
   // Set Parallax effect
   handleParallax = () =>  

@@ -1,9 +1,9 @@
 export default [{
 	url: '/',
-	name: 'Home'
+	name: 'Introduction'
 }, {
 	url: '/what-is-react',
-	name: 'About'
+	name: 'What'
 }, {
 	url: '/why-react',
 	name: 'Why'
@@ -13,7 +13,7 @@ export default [{
 }, {
 	url: '/react-myths',
 	name: 'Myths'
-}, {
+},{
 	url: '/resources',
 	name: 'Resources'
 }, {

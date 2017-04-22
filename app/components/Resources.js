@@ -1,50 +1,31 @@
 import React from 'react'
+import { IndexLink, Link } from 'react-router'
 import DocumentMeta from 'react-document-meta'
 
-export default () => {
+export default ({}) => {
 
   const meta = {
-    title: 'Resources Title',
-    description: 'Resources description for React SEO',
-    canonical: 'http://reactseo.io',
-    meta: {
-      charset: 'utf-8',
-      name: {
-        keywords: 'react,meta,document,html,tags'
-      },
-      property: {
-        'og:title': 'Social title property Resources page react',
-        'og:site_name': 'Social Sitename Resources page react',
-        'og:description': 'Social description property Resources page react'
-      }
-    }
+    title: 'React JS Resources - ReactSEO.io',
+    description: 'A collection of useful resources surrounding the topic of React JS.',
+    canonical: 'http://reactseo.io/resources'
   }
 
   return (
   <div>
     <DocumentMeta {...meta} />
     <h1>Documentation</h1>
+    <ul className='inlinks'>
+      <li><Link to='/resources/seo'>Seo</Link></li>
+      <li><Link to='/resources/learn-react'>Learn React</Link></li>
+    </ul>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquid officiis nesciunt ab  praesentium officia perspiciatis ad repellat nisi blanditiis natus cum ipsa velit, recusandae   consequuntur distinctio dicta neque. Quos.
+      Here are some external links to some useful React sites.
     </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquid officiis nesciunt ab  praesentium officia perspiciatis ad repellat nisi blanditiis natus cum ipsa velit, recusandae   consequuntur distinctio dicta neque. Quos.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquid officiis nesciunt ab  praesentium officia perspiciatis ad repellat nisi blanditiis natus cum ipsa velit, recusandae   consequuntur distinctio dicta neque. Quos.
-    </p>
-
-    <img src="../img/react-render.jpg" alt="React Server Side rendering"/>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquid officiis nesciunt ab  praesentium officia perspiciatis ad repellat nisi blanditiis natus cum ipsa velit, recusandae   consequuntur distinctio dicta neque. Quos.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquid officiis nesciunt ab  praesentium officia perspiciatis ad repellat nisi blanditiis natus cum ipsa velit, recusandae   consequuntur distinctio dicta neque. Quos.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquid officiis nesciunt ab  praesentium officia perspiciatis ad repellat nisi blanditiis natus cum ipsa velit, recusandae   consequuntur distinctio dicta neque. Quos.
-    </p>
+    <ul className='resources'>
+      <li><a ratget='_blank' href='https://facebook.github.io/react/'>React on Github</a></li>
+      <li><a ratget='_blank' href='http://stackoverflow.com/questions/tagged/reactjs'>React discussion on Stack Overflow</a></li>
+    </ul>
+    
   </div>
   )
 }
