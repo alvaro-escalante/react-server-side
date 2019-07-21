@@ -1,4 +1,5 @@
 import React from 'react'
+import { IndexLink, Link } from 'react-router'
 import DocumentMeta from 'react-document-meta'
 
 export default () => {

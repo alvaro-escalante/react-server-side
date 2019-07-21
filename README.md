@@ -1,53 +1,30 @@
-JS SEO REACT.JS - Server Side Rendering
-===============
+##React Server Side Rendering
+=============================
 
 Quick start
 -----------
 
-Clone the repo and run 'npm run setup'. 
+###React Server Side Rendering with React router and and Express server
 
-For development run 'npm start' to run the node server and then on another terminal tab 'gulp --dev'.
+- To run development mode first start express server by running `npm start` the in another terminal tab run `gulp --dev`
+- To build for production `gulp built`
+- 
 
-For production run gulp pro for the react production version, uglify and picture compression.
+###To run on the server – Nginx
 
-To upload to the server copy app (except the dev folder) and packages.json and run 'npm install' 
-from the terminal run 'npm run-script upstart'
+- Install Node and babel-cli
+- Edit server block to /app:
 
-Note, Windows users may need to run the initial command more than once for it to complete successfully.
+```
+  proxy_pass http://localhost:3000;
+  proxy_http_version 1.1;
+  proxy_set_header Upgrade $http_upgrade;
+  proxy_set_header Connection 'upgrade';
+  proxy_set_header Host $host;
+  proxy_cache_bypass $http_upgrade;
+```
 
-General usage notes
--------------------
-
-- Make all changes in src/ directory, minified/compressed stuff is then output by gulp to dist/ (dist/ is deleted everytime gulp is run).
-- Images should be put in src/static/img/. Gulp will apply compression without reducing their quality.
-- JavaScript should go in src/static/js/main.jsx. Gulp will perform eslint on your code and compress main.min.js (and any other js files in that directory) into a single, minified js file.
-- Bower components e.g. jQuery should be added to bower.json. Files will be installed in src/static/bower_components/.
-- Anything not CSS/JS/images should go in src/static/assets/ e.g. fonts, videos, other files.
-- Browser support included for IE11 and above
-
-Coding standards
-----------------
-
-The BV house styles have been written using the following coding standards, which should be used for all projects. These guidelines will likely evolve over time.
-
-General
-
-- Be consistent
-- Code should be clean, commented and readable
-- Use graceful degradation
-- Leave your code tidy, delete commented sections of code prior to completion
-- Assume someone else will need to work on your code after you do
-- Indent code logically
-- Don't repeat yourself
-
-HTML
-
-- Lowercase everything
-- New tag, new line
-- Ensure HTML is valid
-- No inline styles
-
-CSS
+###CSS
 
 - Use lowercase and hyphens for class names
 - Newline for each style property and classname
@@ -62,28 +39,13 @@ CSS
 - Apply styles using a class name rather than an element name (except for base styles)
 - Styles for a specific purpose should be grouped together, not scattered e.g. media queries, browser specific styles
 
-JavaScript
+###JavaScript
 
 - JS should interact with the DOM using either element IDs, data* attributes or class names that have no styles associated with them, and use the naming convention js-classname, to make it really obvious that they are used only by the JavaScript
 - use braces with all multiline blocks
 - every function should have a comment that briefly explains what it does
 - name functions and variables descriptively
 - camelcase for objects, functions and instances
-
-File Generator
-
-- Set variables at src/static/assets/_file_data.json
-- Set template at src/static/assets/_file_template.html
-- Run the script by typing the terminal command 'gulp generateFiles'
-- It will produce the files in the folder files
-
-Babel
-
-- Plugins and presets added to .babelrc
-
-Eslint
-
-- Added Globals and rules in the .eslintcr for Angular, React, $ and Jquery.
 
 Remember SEO
 

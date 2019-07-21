@@ -1,6 +1,6 @@
 import React from 'react'
 import { Router, Route, IndexRoute, browserHistory, match, RouterContext } from 'react-router'
-import App from './components/App'
+import App from './app'
 import Introduction from './components/Introduction'
 import About from './components/About'
 import Why from './components/Why'
@@ -13,6 +13,7 @@ import Learn from './components/resources/Learn'
 import Next from './components/resources/Next'
 import Builtvisible from './components/Builtvisible'
 import NotFoundPage from './components/NotFoundPage'
+
 // Server side rendering
 const routes = (
   <Router history={browserHistory}>
