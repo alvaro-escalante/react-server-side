@@ -5,8 +5,8 @@ Quick start
 -----------
 
 - To run development mode first start express server by running `npm start` then in another terminal tab run `gulp --dev`
-- To build for production `gulp built`
-- To run node on the public server and then run `npm upstart`
+- To build for production run `gulp built`
+- To Publish run `npm upstart`
 
 Config for public server – Nginx
 -----------
