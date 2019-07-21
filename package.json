@@ -10,7 +10,7 @@
     "run-npm-install": "npm install",
     "run-gulp": "gulp",
     "start": "node_modules/.bin/babel-node app/server.js",
-    "upstart": "forever start -c node_modules/.bin/babel-node app/server.js"
+    "upstart": "pm2 start --interpreter babel-node app/server.js"
   },
   "repository": {
     "type": "git",

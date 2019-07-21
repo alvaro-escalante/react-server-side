@@ -8,7 +8,7 @@ export default props => `
   
   <body>
     <div id="root">${props.reactOutput}</div>
+  	<script src="/js/main.min.js"></script>
   </body>
   
-  <script src="/js/main.min.js"></script>
 </html>`

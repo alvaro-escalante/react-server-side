@@ -10,8 +10,6 @@ import index from './index'
 
 // initialize the server and configure support for ejs templates
 const server = Express()
-// server.set('view engine', 'pug')
-// server.set('views', Path.join(__dirname, '/views'))
 // define the folder that will be used for static assets
 server.use(Express.static(Path.join(__dirname, './static')))
 // universal routing and rendering

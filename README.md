@@ -1,4 +1,4 @@
-##React Server Side Rendering
+React Server Side Rendering
 =============================
 
 Quick start
@@ -6,22 +6,27 @@ Quick start
 
 ###React Server Side Rendering with React router and and Express server
 
-- To run development mode first start express server by running `npm start` the in another terminal tab run `gulp --dev`
+- To run development mode first start express server by running `npm start` then in another terminal tab run `gulp --dev`
 - To build for production `gulp built`
-- 
+- To run node on the public server and then run `npm upstart`
 
-###To run on the server – Nginx
+###Config for public server – Nginx
 
-- Install Node and babel-cli
-- Edit server block to /app:
+- Install Node an NPM 
+- Install babel-node globally `npm install babel-cli -g`
+- Install pm2 globally `npm install pm2 -g` 
+- Add a server block for ssr:
 
 ```
-  proxy_pass http://localhost:3000;
+location / {
+  proxy_pass http://localhost:3000/;
   proxy_http_version 1.1;
-  proxy_set_header Upgrade $http_upgrade;
-  proxy_set_header Connection 'upgrade';
-  proxy_set_header Host $host;
-  proxy_cache_bypass $http_upgrade;
+  proxy_set_header    Host             $host;
+  proxy_set_header    X-Real-IP        $remote_addr;
+  proxy_set_header    X-Forwarded-For  $proxy_add_x_forwarded_for;
+  proxy_read_timeout 1800;
+  proxy_connect_timeout 1800;
+}
 ```
 
 ###CSS
