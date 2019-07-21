@@ -4,13 +4,12 @@ React - Server Side Rendering
 Quick start
 -----------
 
-React Server Side Rendering, React router and Express server
-
 - To run development mode first start express server by running `npm start` then in another terminal tab run `gulp --dev`
 - To build for production `gulp built`
 - To run node on the public server and then run `npm upstart`
 
 Config for public server – Nginx
+-----------
 
 - Install Node an NPM 
 - Install babel-node globally `npm install babel-cli -g`
@@ -30,6 +29,7 @@ location / {
 ```
 
 CSS
+---
 
 - Use lowercase and hyphens for class names
 - Newline for each style property and classname
@@ -45,6 +45,7 @@ CSS
 - Styles for a specific purpose should be grouped together, not scattered e.g. media queries, browser specific styles
 
 JavaScript
+----------
 
 - JS should interact with the DOM using either element IDs, data* attributes or class names that have no styles associated with them, and use the naming convention js-classname, to make it really obvious that they are used only by the JavaScript
 - use braces with all multiline blocks
@@ -53,6 +54,7 @@ JavaScript
 - camelcase for objects, functions and instances
 
 Remember SEO
+-----------
 
 - Page meta tags including og and any related extra stuff
 - Image alt tags
