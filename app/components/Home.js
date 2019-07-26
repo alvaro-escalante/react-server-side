@@ -4,9 +4,8 @@ import DocumentMeta from 'react-document-meta'
 export default () =>  {
 
   const meta = {
-    title: 'Introduction to React JS SEO - ReactSEO.io',
-    description: 'A live test site developed by SEO & digital marketing agency Builtvisible to explore the capabilities of React JS and the impact on SEO.',
-    canonical: 'http://reactseo.io'
+    title: 'Introduction to React Server Side Render',
+    description: 'Hello A live test site developed by SEO & digital marketing agency Builtvisible to explore the capabilities of React JS and the impact on SEO.'
   }
 
   return (
@@ -14,11 +13,13 @@ export default () =>  {
       <DocumentMeta {...meta} />
       <h1>Introduction</h1>
       <p>
-        Despite Google’s long standing assertion that it <a target="_blank" href="https://webmasters.googleblog.com/2014/05/understanding-web-pages-better.html">can index pages</a> that render their content using Javascript, anecdotal evidence indicates otherwise.
+        Despite Google’s long standing assertion that it <a target="_blank" href="https://webmasters.googleblog.com/2014/05/understanding-web-pages-better.html" rel="noopener" aria-label="Webmasters">can index pages</a> that render their content using Javascript, anecdotal evidence indicates otherwise.
       </p>
       <p>
-        Here at <a target="_blank" href='https://builtvisible.com/'>Builtvisible</a>, we’ve set out to test that assumption across the most popular current JavaScript frameworks. This site is dedicated to the React version of the experiment but you can take a look at the <a target="_blank" href='http://www.angularseo.io/'>Angular version here</a>.
+        Here at <a target="_blank" href='https://builtvisible.com/' aria-label="Builtvisible" rel="noopener">Builtvisible</a>, we’ve set out to test that assumption across the most popular current JavaScript frameworks.
       </p>
+
+      <img src="../img/react.jpg" alt="React Router"/>
 
       <h2>Methodology</h2>
       <p>
@@ -33,14 +34,8 @@ export default () =>  {
         <li>How are search engines handling images and other media forms?</li>
         <li>Is the rel=canonical tag being adhered to?</li>
       </ul>
-        
-      <p>
-        We aim to report on these findings within the next few months. 
-      </p>
 
-
-      <img src="../img/react.jpg" alt="React Router"/>
-      
+          
     </div>
   )
 }

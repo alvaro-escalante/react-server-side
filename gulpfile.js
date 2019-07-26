@@ -74,10 +74,11 @@ Scripts = build => {
     process.env.NODE_ENV = 'production'
   // Map errors
   const mapError = function(error) {
+ 
     $.notify({
       title: 'Javascript Error',
       subtitle: 'Syntax error in script!',
-      message: 'Error in JavaScript - See terminal',
+      message: error.message,
       icon: 'node_modules/gulp-notify/assets/gulp-error.png'
     }).write(error)
     this.emit('end')
@@ -88,7 +89,7 @@ Scripts = build => {
     extensions: ['.js', '.jsx'],
     cache: {}, // <---- here for optimization 
     packageCache: {}, // <----  here
-    debug: dev // <----  and here
+    debug: !build // <----  and here
   },
   //Transform options
   eslit = {
@@ -102,14 +103,14 @@ Scripts = build => {
     },
     'plugins': ['react']
   },
-  babel = { 'sourceMaps': dev }
+  babel = { 'sourceMaps': !build }
   let transform = mode => mode.transform($.eslintify, eslit).transform($.babelify, babel)
   const built = transform($.browserify(opts)), watch = transform($.watchify($.browserify(opts))),
 
   bundle = type => type
     .bundle()
     .on('error', mapError) // Map error reporting
-    .pipe($.vinylSourceStream('main.jsx')) // Set source name
+    .pipe($.vinylSourceStream('app.js')) // Set source name
     .pipe($.vinylBuffer()) // Convert to gulp pipeline
     .pipe(dev ? $.util.noop() : $.bytediff.start())
     .pipe(dev ? $.util.noop() : $.uglify())
@@ -159,6 +160,7 @@ Browsersync = () => {
     //   cert: "/usr/local/etc/nginx/ssl/localhost.crt",
     // }, 
     // ui: false,
+    port: 5000,
     notify: true, // Will not show notify banner on reload or injected
     online: false, // Will not attempt to determine your network status
     open: false

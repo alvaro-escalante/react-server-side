@@ -1,12 +1,14 @@
+
+
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Slab", sans-serif;
 }
 
 h1, h2, p {
-  color: #fff;
-  text-shadow: (-1px) 1px 3px #333;
+  color: #333;
   font-weight: 300;
 }
+
 
 h2 {
   padding: 1.5em 0;
@@ -16,22 +18,18 @@ p {
   padding: 10px 0;
 }
 
-.container h1 {
-  font-size: 30px;
-  font-weight: 400;
-  text-shadow: 2px 4px 3px #000;
-  padding: 12px 0 10px;
-}
-
-h1 {
-  font-size: 50px;
-  text-shadow: 0px 4px 3px #000;
-  position: relative;
-
-  @include media(tabletLrg) {
-    font-size: 34px;
+.title {
+  color: #fff;
+    @include fontsize(35);
+    text-align: center;
+  @include media(tabletLrg) { 
+  @include fontsize(19);
+    text-align: left;
   }
+  padding: 12px 20px 10px;
+  font-weight: 300;
 }
+
 
 h1 + p {
   margin-top: 10px;
@@ -57,10 +55,10 @@ p {
 }
 
 a {
-  color: $blue;
+  color: $highlight;
 
   &:hover {
-    color: darken($blue, 10%);
+    color: darken($highlight, 10%);
   }
 }
 
@@ -70,7 +68,7 @@ a {
   li {
     padding: 0.8em 0.3em;
     list-style-type: square;
-    color: $blue;
+    color: $highlight;
   }
 }
 
@@ -83,16 +81,17 @@ a {
   li {
     padding: 0.8em 0.3em;
     list-style-type: disc;
-    color: #fff;
+    color: #333;
   }
 }
 
 .inlinks {
+  margin-top: 20px;
   margin-left: 20px;
 
   li {
     padding: 0.8em 0.3em;
     list-style-type: disc;
-    color: $blue;
+    color: $highlight;
   }
 }

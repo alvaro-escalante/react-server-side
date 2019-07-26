@@ -11,18 +11,18 @@ export default class App extends Component {
   }
   
   // Invoque parallax and mobile menu on scroll and resize(use global not window for node.js)
-  // componentWillMount() {
-  //   global.onscroll = () => this.handleParallax()
-  //   global.onresize = () => this.handleResize()
-  // }
+  componentWillMount() {
+    global.onscroll = () => this.handleParallax()
+    global.onresize = () => this.handleResize()
+  }
+
+  componentDidMount() {
+    this.setState({ width: global.innerWidth <= 950})
+  }
 
   // toggle mobile menu, Check that mobile width is true
-  handleMobile = e => {
-    var el = document.getElementById('here')
-    el.classList.remove('hide')
-    if (this.state.width)
-      this.setState({ mobileActive: !this.state.mobileActive })
-  }
+  handleMobile = () =>
+    this.setState({ mobileActive: !this.state.mobileActive })
 
   // Set Parallax effect
   handleParallax = () =>  

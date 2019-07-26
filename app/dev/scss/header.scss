@@ -1,0 +1,32 @@
+.header {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  height: 544px;
+  margin: (-150px) auto;
+  text-align: center;
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .logo {
+    padding: 38px 51px;
+    background: url(../img/logo.svg) no-repeat center (center / contain);
+    margin-right: 4%;
+    animation: spin 10s infinite linear;
+    display: block;  
+  }
+
+  @include media(tabletLrg) {
+    height: 406px;
+    .logo { padding: 28px 40px }
+  }
+
+  @keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+  }
+}

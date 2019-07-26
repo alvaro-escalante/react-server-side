@@ -4,9 +4,8 @@ import DocumentMeta from 'react-document-meta'
 export default () => {
 
   const meta = {
-    title: 'React JS Background - ReactSEO.io',
-    description: 'Created in 2011 by Jordan Walke whilst working at Facebook, originally starting life as a XHP version of PHP to minimize cross site script attacks.',
-    canonical: 'http://reactseo.io/background'
+    title: 'React JS Background',
+    description: 'Created in 2011 by Jordan Walke whilst working at Facebook, originally starting life as a XHP version of PHP to minimize cross site script attacks.'
   }
     
   return (
@@ -22,9 +21,10 @@ export default () => {
       <p>
        This presentation by Tom Occhino and Jordan Walke from 2013 explains in more detail why React became the preferred JS framework at Facebook:
       </p>
-
-      <iframe className="frames" width="560" height="315" src="https://www.youtube.com/embed/GW0rj4sNH2w?ecver=2"  frameBorder="0" allowFullScreen></iframe>
-  
+      
+      <div class='videowrapper'>
+        <iframe class="frames" width="950" height="354" src="https://www.youtube.com/embed/GW0rj4sNH2w?ecver=2" frameBorder="0" allowFullScreen></iframe>
+      </div>
     </div>
   )
 }

@@ -34,14 +34,13 @@ server.get('*', async (req, res) => {
         reactOutput = renderToString(<NotFoundPage/>)
         res.status(404)
       }
-      // render the index template with the embedded React markup and Load meta data
-      // return res.render('index', { reactOutput,  reactMeta}) 
+
+      // render the index template with the embedded React markup and Load metadata
       res.send(index({ reactOutput, reactMeta }))
     }
   )
 })
 // start the server
-const port = process.env.PORT || 3000;
-const env = process.env.NODE_ENV || 'production'
-server.listen(port);
-console.log(`Listening on port ${port} [${env}]`);
+const port = process.env.PORT || 3000, env = process.env.NODE_ENV || 'production'
+server.listen(port)
+console.log(`React App listening on port ${port} [${env}]`)

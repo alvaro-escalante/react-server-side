@@ -1,9 +1,10 @@
 $mobile: 578px;
 $tablet: 700px;
 $tabletLrg: 950px;
-$desktop: 1100px;
-$blue: #00d8ff;
 
+$desktop: 1100px;
+$highlight: #233345;
+$blue: #00D8FF;
 $background: #0b7755;
 
 @mixin media($media) {
@@ -28,6 +29,12 @@ $background: #0b7755;
     }
   }
 }
+
+@mixin fontsize($size) {
+  font-size: ($size / 16) * 100%;
+  font-size: ($size / 16) + rem;
+}
+
 
 @mixin clearfix {
   &:before,

@@ -5,8 +5,7 @@ export default () => {
 
   const meta = {
     title: 'What is React JS - ReactSEO.io',
-    description: 'React is a declarative flexible open-source JavaScript library designed to deal exclusively with the output of information.',
-    canonical: 'http://reactseo.io/what-is-react'
+    description: 'React is a declarative flexible open-source JavaScript library designed to deal exclusively with the output of information.'
   }
 
   return (
@@ -22,9 +21,7 @@ export default () => {
     <p>
       React is often described in the same way as other Javascript frameworks but this is really misleading. <strong>React and Angular are not directly comparable entities.</strong> Where Angular is a complete framework, React is not. React is a declarative, flexible Javascript Library used to deal <strong>exclusively with Views</strong> — the output of information.
     </p>
-      
-    <p class='inline'>This is a great post that goes into things in more detail</p>
-    <a target='_blank' href='http://blog.andrewray.me/reactjs-for-stupid-people/'>Reactjs for stupid people/</a>
+    
 
     <img src="../img/about-react.jpg" alt="What is React"/>
   </div>

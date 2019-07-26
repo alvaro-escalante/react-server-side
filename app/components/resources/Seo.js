@@ -19,23 +19,23 @@ export default () => {
   
     <ul className='resources'>
       <li>
-        <a target='_blank' href='https://builtvisible.com/react-js-seo/'>Building Search Friendly Javascript Apps</a>
+        <a target='_blank' href='https://builtvisible.com/react-js-seo/' aria-label="Builtvisible" rel="noopener">Building Search Friendly Javascript Apps</a>
       </li>
       <li>
-        <a target='_blank' href='http://andrewhfarmer.com/react-seo/'>Will Google find your React content?</a>
+        <a target='_blank' href='http://andrewhfarmer.com/react-seo/' aria-label="Andrewh Farmer" rel="noopener">Will Google find your React content?</a>
       </li>
       <li>
-        <a target='_blank' href='https://medium.freecodecamp.com/seo-vs-react-is-it-neccessary-to-render-react-pages-in-the-backend-74ce5015c0c9'>SEO vs. React</a>
+        <a target='_blank' href='https://medium.freecodecamp.com/seo-vs-react-is-it-neccessary-to-render-react-pages-in-the-backend-74ce5015c0c9' aria-label="Medium" rel="noopener">SEO vs. React</a>
       </li>
 
       <li>
-        <a target='_blank' href='https://builtvisible.com/seo-friendly-react-js-app-architecture-for-multimedia-content/'>Seo Friendly react js app architecture</a>
+        <a target='_blank' href='https://builtvisible.com/seo-friendly-react-js-app-architecture-for-multimedia-content/' aria-label="Builtvisible" rel="noopener">Seo Friendly react js app architecture</a>
       </li>
       <li>
-        <a target='_blank' href='https://builtvisible.com/building-content-in-react/'>Building Content in React</a>
+        <a target='_blank' href='https://builtvisible.com/building-content-in-react/' aria-label="Builtvisible" rel="noopener">Building Content in React</a>
       </li>
       <li>
-        <a target='_blank' href='https://medium.freecodecamp.com/using-fetch-as-google-for-seo-experiments-with-react-driven-websites-914e0fc3ab1'>Seo experiments with React driven websites</a>
+        <a target='_blank' href='https://medium.freecodecamp.com/using-fetch-as-google-for-seo-experiments-with-react-driven-websites-914e0fc3ab1' aria-label="Medium" rel="noopener">Seo experiments with React driven websites</a>
       </li>
     </ul>  
   </div>

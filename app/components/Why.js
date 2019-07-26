@@ -5,8 +5,7 @@ export default () => {
 
   const meta = {
     title: 'Why Use React JS - ReactSEO.io',
-    description: 'An opensource framework delivering fast, efficient and rich web applications with a variety of out the box developer tools.',
-    canonical: 'http://reactseo.io/why-react'
+    description: 'An opensource framework delivering fast, efficient and rich web applications with a variety of out the box developer tools.'
   }
 
   return (
